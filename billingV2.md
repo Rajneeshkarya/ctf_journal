@@ -40,6 +40,6 @@
 
 ---
 **Lesssons Learned**
-Always enumerate **sudo permissions `(sudo -l)`**
-Understand how **fail2Ban works** to craft correct payloads
-**Restarting a service** can sometimes execute modified rules
+1. Always enumerate **sudo permissions `(sudo -l)`**
+2. Understand how **fail2Ban works** to craft correct payloads
+3. **Restarting a service** can sometimes execute modified rules
